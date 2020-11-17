@@ -1264,8 +1264,8 @@ the namespace scope of the global namespace\iref{basic.namespace}.
 \begin{codeblock}
 namespace Q {
   namespace V { void f(); }
-  void V::f() {  // in the scope of \tcode{V}
-    void h();    // declares \tcode{Q::V::h}
+  void V::f() {         // in the scope of \tcode{V}
+    void h();           // declares \tcode{Q::V::h}
   }
 }
 \end{codeblock}
