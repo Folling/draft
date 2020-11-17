@@ -1,15 +1,25 @@
 %!TEX root = std.tex
 \infannex{diff}{Compatibility}
 
-% TODO: Add this once we have differences.
+\rSec1[diff.cpp20]{\Cpp{} and ISO \CppXX{}}
 
-%\rSec1[diff.cpp20]{\Cpp{} and ISO \CppXX{}}
-%
-%\pnum
-%\indextext{summary!compatibility with ISO \CppXX{}}%
-%This subclause lists the differences between \Cpp{} and
-%ISO \CppXX{} (ISO/IEC 14882:2020, \doccite{Programming Languages --- \Cpp{}}),
-%by the chapters of this document.
+\pnum
+\indextext{summary!compatibility with ISO \CppXX{}}%
+This subclause lists the differences between \Cpp{} and
+ISO \CppXX{} (ISO/IEC 14882:2020, \doccite{Programming Languages --- \Cpp{}}),
+by the chapters of this document.
+
+\rSec2[diff.cpp20.utilities]{\ref{utilities}: general utilities library}
+
+\diffref{mem.poly.allocator.class}
+\change
+Remove \tcode{destroy} from class template \tcode{std::pmr::polymorphic_allocator}.
+\rationale
+This function is equivalent to the default implementation of \tcode{destroy}
+in \tcode{allocator_traits}\iref{allocator.traits.members}.
+\effect
+Valid \CppXVII{} code may fail to compile or may change meaning
+in this revision of \Cpp{}.
 
 \rSec1[diff.cpp17]{\Cpp{} and ISO \CppXVII{}}
 
