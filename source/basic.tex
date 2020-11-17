@@ -1302,12 +1302,10 @@ struct C : A, B<C> {};  // error at \#1: \tcode{C::type} not found
 \end{note}
 
 \rSec2[basic.scope.enum]{Enumeration scope}%
-\indextext{enumeration scope|see{scope, enumeration}}%
-\indextext{scope!enumeration}
 
 \pnum
 Any declaration of an enumeration $E$ introduces
-an \defnx{enumeration scope}{scope!enumeration}
+an \defnadj{enumeration}{scope}
 that includes the \grammarterm{enumerator-list} of
 the \grammarterm{enum-specifier} for $E$ (if any).
 
