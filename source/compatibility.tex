@@ -11,6 +11,16 @@ by the chapters of this document.
 
 \rSec2[diff.cpp20.utilities]{\ref{utilities}: general utilities library}
 
+\diffref{default.allocator.general}
+\change
+Remove \tcode{is_always_equal} from class template \tcode{std::allocator}.
+\rationale
+\tcode{is_always_equal}, when added to \tcode{std::allocator},
+causes the standard library to treat derived types as equal.
+\effect
+Valid \CppXVII{} code may fail to compile or may change meaning
+in this revision of \Cpp{}.
+
 \diffref{mem.poly.allocator.class}
 \change
 Remove \tcode{destroy} from class template \tcode{std::pmr::polymorphic_allocator}.
